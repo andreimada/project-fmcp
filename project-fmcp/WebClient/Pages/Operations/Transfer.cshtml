@@ -1,0 +1,29 @@
+﻿@page
+@model WebClient.Pages.Operations.TransferModel
+@{
+}
+<h2>Transfer Inventory</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Transfer.ProductId" class="control-label">Product ID</label>
+        <input asp-for="Transfer.ProductId" class="form-control" />
+        <span asp-validation-for="Transfer.ProductId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Transfer.SourceWarehouseId" class="control-label">Source Warehouse ID</label>
+        <input asp-for="Transfer.SourceWarehouseId" class="form-control" />
+        <span asp-validation-for="Transfer.SourceWarehouseId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Transfer.DestinationWarehouseId" class="control-label">Destination Warehouse ID</label>
+        <input asp-for="Transfer.DestinationWarehouseId" class="form-control" />
+        <span asp-validation-for="Transfer.DestinationWarehouseId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Transfer.Quantity" class="control-label">Quantity</label>
+        <input asp-for="Transfer.Quantity" class="form-control" />
+        <span asp-validation-for="Transfer.Quantity" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Transfer" class="btn btn-info" />
+</form>

@@ -1,0 +1,13 @@
+﻿@page
+@model SuccessModel
+@{
+}
+<h2>Operation Successful</h2>
+
+<p>Your operation was completed successfully!</p>
+
+<meta http-equiv="refresh" content="5;url=@Url.Page("/InventoryRecord/Index")" />
+
+<div>
+    <a asp-page="/InventoryRecord/Index" class="btn btn-primary">Back to Inventory Records</a>
+</div>

@@ -1,0 +1,44 @@
+﻿@page
+@model WebClient.Pages.InventoryRecord.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>InventoryRecord</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="InventoryRecord.ProductId" class="control-label"></label>
+                <input asp-for="InventoryRecord.ProductId" class="form-control" />
+                <span asp-validation-for="InventoryRecord.ProductId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InventoryRecord.WarehouseId" class="control-label"></label>
+                <input asp-for="InventoryRecord.WarehouseId" class="form-control" />
+                <span asp-validation-for="InventoryRecord.WarehouseId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InventoryRecord.Quantity" class="control-label"></label>
+                <input asp-for="InventoryRecord.Quantity" class="form-control" />
+                <span asp-validation-for="InventoryRecord.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

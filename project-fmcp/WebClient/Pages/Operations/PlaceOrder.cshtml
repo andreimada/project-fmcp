@@ -1,0 +1,21 @@
+﻿@page
+@model WebClient.Pages.Operations.PlaceOrderModel
+@{
+}
+<h2>Place Order</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Order.ProductId" class="control-label"></label>
+        <input asp-for="Order.ProductId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Order.WarehouseId" class="control-label"></label>
+        <input asp-for="Order.WarehouseId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Order.Quantity" class="control-label"></label>
+        <input asp-for="Order.Quantity" class="form-control" />
+    </div>
+    <input type="submit" value="Place Order" class="btn btn-primary" />
+</form>
